@@ -1,0 +1,143 @@
+.mainContainer{
+  background-color: #121212;
+  /* background: blueviolet; */
+  flex: 1;
+}
+.headerImage{
+  width: 15%;
+  height: 10%;
+  text-align: center;
+  margin-top: 2%;
+}
+.headerdiv{
+  display: flex;
+  flex-direction: row;
+  margin-left: 25%;
+  margin-top: 2%;
+  /* justify-content: space-around; */
+}
+.headerText{
+  color:#EFF5CF;
+  margin-left: 15px;
+  margin-top: -1%;
+}
+.description{
+  color:#FFFFFF;
+  font-size: 16PX;
+  font-weight: 500;
+  margin-left: 25%;
+}
+.headerTextDiv{   
+  margin-left: 50%;
+  margin-top: 2%;
+}
+.searchText{
+  color:#FFFFFF;
+  font-size: 20PX;
+  font-weight: 500;
+  margin-left: 25%;
+}
+.searchField{
+  margin-left: 5% !important;
+  border-radius: 25px;
+  border: 2px solid !important;
+  border-color: #10FF8D !important;
+  width: 30%;
+}
+.fromField{
+  background: #242424;
+  border-radius: 20px;
+  flex:0.8;
+  justify-content: center;
+  width: 60%;
+  margin-left: 25%;
+  /* margin-bottom: 5%; */
+}
+.buttonDiv{
+  flex-direction:row;
+  display:flex;
+  justify-content: center;
+  background-color: #121212;
+  width: 35% !important;
+  border-radius: 25px !important;
+  margin-left: 36%;
+  margin-top: 2%;
+}
+.buttonactive{
+  border-radius: 25px !important;
+  background-color: #10FF8D !important;
+  width: 100%;
+  color: #FFFFFF;
+  margin: 2px !important;
+  color: #121212;
+}
+.buttonInactive{
+  width: 100%;
+  color: #FFFFFF !important;
+}
+.fromHeader{
+  color: #FFFFFF;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: -1%;
+    /* margin-top: -%; */
+}
+.overlayDiv {
+  height: -webkit-fill-available;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+  margin-left: -10% !important;
+}
+.mainCard {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+.formTextField{
+  border-radius: 25px;
+  border: 2px solid !important;
+  border-color: #10FF8D !important;
+  background: transparent;
+  width: 136%;
+  color:#EFF5CF !important
+}
+.fromPlaceHolder{
+  color:#FFFFFF;
+  font-size: 10px;
+  margin-bottom: -5%;
+}
+.coditionClass{
+  color: #10FF8D;
+  margin-left: 5px;
+}
+.checkbosText{
+  font-size: 10px;
+  color: #FFFFFF;
+}
+.loginLink{
+  font-size: 12px;
+  color: #FFFFFF;
+}
+.buttonaSignUpctive{
+  border-radius: 25px !important;
+  background-color: #10FF8D !important;
+  width: 20% !important;
+  color: #FFFFFF;
+  margin: 2px !important;
+}
+.mainSignupDiv{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-left: 10% !important;
+}
+.errorMeaasge{
+  max-width: 10%;
+}
+.input-container {
+  width: 100%;
+  max-width: 100%;
+  padding-left: 10px;
+}
