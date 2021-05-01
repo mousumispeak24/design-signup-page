@@ -244,7 +244,7 @@ const talentSignupButtonActive = () =>{
                   />
                   {firstNameValidationError && (
                     <div style={{width:"200px"}}>
-                    <span className="error-msg " style={{color:"#FFFFFF"}}>
+                    <span className="error-msg " style={{color:"#D32F2F"}}>
                       {"Please enter valid first name"}
                     </span>
                     </div>
@@ -272,7 +272,7 @@ const talentSignupButtonActive = () =>{
                   />
                   {lastNameValidationError && (
                     <div style={{width:"200px"}}>
-                    <span className="error-msg " style={{color:"#FFFFFF"}}>
+                    <span className="error-msg " style={{color:"#D32F2F"}}>
                       {"Please enter valid last name"}
                     </span>
                     </div>
@@ -300,7 +300,7 @@ const talentSignupButtonActive = () =>{
                   />
                   {userNameValidationError && (
                     <div style={{width:"200px"}}>
-                    <span className="error-msg errorMeaasge" style={{color:"#FFFFFF"}}>
+                    <span className="error-msg errorMeaasge" style={{color:"#D32F2F"}}>
                       {"Username must be minimum 5 characters, lower case alphanumeric and can contain any of the following special characters(_, . or -)."}
                     </span>
                     </div>
@@ -328,7 +328,7 @@ const talentSignupButtonActive = () =>{
                   />
                   {emailValidationError && (
                     <div style={{width:"200px"}} >
-                    <span className="error-msg" style={{color:"#FFFFFF"}}>
+                    <span className="error-msg" style={{color:"#D32F2F"}}>
                       {"Please enter valid password"}
                     </span>
                     </div>
@@ -356,7 +356,7 @@ const talentSignupButtonActive = () =>{
                   />
                   {timeZoneValidationError && (
                     <div style={{width:"200px"}}>
-                    <span className="error-msg " style={{color:"#FFFFFF"}}>
+                    <span className="error-msg " style={{color:"#D32F2F"}}>
                       {"Please enter valid timezone"}
                     </span>
                     </div>
@@ -384,7 +384,7 @@ const talentSignupButtonActive = () =>{
                   />
                   {passwordValidationError && (
                     <div style={{width:"200px"}}>
-                    <span className="error-msg" style={{color:"#FFFFFF"}}>
+                    <span className="error-msg" style={{color:"#D32F2F"}}>
                       {"Password must be minimum 8 characters, alphanumeric with atleast one uppercase and one special character(!, @, #, $, %, ^, & or *)."}
                     </span>
                     </div>
