@@ -6,14 +6,9 @@ import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import IconButton from "@material-ui/core/IconButton";
 import { Search as SearchIcon } from "@material-ui/icons";
-import {  Card,
-  Container,
-  Button,
-  Typography,
-  Grid,
-  Box,} from "@material-ui/core";
+import {  Button, Grid, Box,} from "@material-ui/core";
+import TimezonePicker from 'react-timezone';
 import { Link } from "react-router-dom";
-import { makeStyles } from '@material-ui/core/styles';
 import {addSagaFanSignup,addSagaTalentSignup} from "../state/actions";
 
 const SignUpContainer = (props) => {
@@ -63,7 +58,7 @@ useEffect(() => {
     setLastName("");
     setUserName("");
     setEmail("");
-    setTimeZone("");
+    setTimeZoneIs("");
     setPassword("")
   }
   return () => {};
@@ -75,7 +70,7 @@ useEffect(() => {
     setLastName("");
     setUserName("");
     setEmail("");
-    setTimeZone("");
+    setTimeZoneIs("");
     setPassword("")
   }
   return () => {};
@@ -122,7 +117,7 @@ const handleSignUp= async () => {
   const [emailValidationError, setEmailValidationError] = useState(
     false
   );
-  const [timeZone, setTimeZone] = useState("");
+  const [timeZoneIs, setTimeZoneIs] = useState("");
   const [timeZoneValidationError, setTimeZoneValidationError] = useState(
     false
   );
@@ -131,18 +126,20 @@ const handleSignUp= async () => {
     false
   );
       //change timezone.........
-const handelPasswordChange = (event) => {
+ const handelPasswordChange = (event) => {
   if (passwordValidationError) {
     setPasswordValidationError(false);
   }
   setPassword(event.target.value);
 };
     //change timezone.........
-const handelTimeZoneChange = (event) => {
+ const handelTimeZoneChange = (event) => {
   if (timeZoneValidationError) {
     setTimeZoneValidationError(false);
   }
-  setTimeZone(event.target.value);
+  // setTimeZone(event.target.value);
+  console.log("event...............",event);
+
 };
   //changeEmaile..........
 const handelEmailChange = (event) => {
@@ -340,20 +337,30 @@ const talentSignupButtonActive = () =>{
             <div className="form-input-holder">
               <Grid container alignItems="center">
                 <Grid item className="input-container">
-                <p className="fromPlaceHolder">Timezonee *</p>
-                  <TextField
-                     className="formTextField"
-                     type="text"
-                     InputProps={{
-                       disableUnderline: true,
-                       style: { color: 'white'}
-                     }}
-                     value={timeZone}
-                     onChange={handelTimeZoneChange}
-                     onKeyDown={(e) => {}}
-                     margin="normal"
-                     placeholder="  Timezone"
-                  />
+                <p className="fromPlaceHolder" style={{marginBottom:"2%"}}>Timezonee *</p>
+                    <TimezonePicker
+                      className="formTextField"
+                      value={timeZoneIs}
+                      onChange={(timezone)=>{
+                        if (timeZoneValidationError) {
+                          setTimeZoneValidationError(false);
+                        }
+                        console.log(timezone);
+                        setTimeZoneIs(timezone)
+                      }}
+                      inputProps={{
+                        placeholder:"Timezone",
+                        // disableUnderline: true,
+                       style: {
+                        background: 'transparent',
+                        color: 'white',
+                        borderRadius:" 25px",
+                        // border: "1px !important",
+                        borderColor:" #10FF8D !important",
+                        }
+                      }}
+                      margin="normal"
+                    />
                   {timeZoneValidationError && (
                     <div style={{width:"200px"}}>
                     <span className="error-msg " style={{color:"#D32F2F"}}>
